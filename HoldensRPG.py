@@ -688,6 +688,7 @@ def shopping(current_location):
             if my_stats["Level"] >= 10:
                 print "\nYou're ready for some better gear!"
                 print "[Hidden Shop]"
+                print "You have " + str(inventory["Gold"]) + " gold."
                 print str(Shop_List_2)
                 shop_choice = raw_input("Choice: ")                       
                 if shop_choice.lower() == "holy armor" and inventory["Gold"] >= 1000:
@@ -728,6 +729,7 @@ def shopping(current_location):
 
             elif my_stats["Level"] < 10:
                 print "\nWhat would you like? \n" + "Available: " + str(Shop_List)
+                print "You have " + str(inventory["Gold"]) + " gold."
                 shop_choice = raw_input("Choice: ")                       
                 if shop_choice.lower() == "potion" and inventory["Gold"] >= 5:
                     print "That will be 5 gold please!" + "\n[Purchased Potion]" 
