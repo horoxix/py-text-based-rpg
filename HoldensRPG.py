@@ -422,6 +422,12 @@ Warlock_Stats_1 = {"Level" : 15, \
                  "Health" : 3000, \
                   "EXP" : 0 \
                  }
+##Dev Stats##
+Dev_Stats_1 = {"Level" : 99, \
+                "Power" : 9999, \
+                 "Health" : 9999, \
+                  "EXP" : 0 \
+                 }
 ##Monster Stats##
 Goblin = {"Level" : 1, \
           "Power" : 10, \
@@ -505,6 +511,11 @@ def begin_quest(player_1):
                 print "Inventory: \n" + str(inventory)
             elif current_location.lower() == "dev":
                 print "Developer"
+                my_stats = Dev_Stats_1
+                equipped_weapon = str(Ultima_Weapon)
+                my_damage = my_stats["Power"] + UltimaWeapon["Power"]
+                equipped_armor = str(Holy_Armor)
+                my_health = my_stats["Health"] + HolyArmor["Health"]
                 inventory["Gold"] += 1000
                 inventory["Emerald"] += 1000
             elif current_location.lower() == "save":
